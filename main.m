@@ -8,6 +8,7 @@
 % Add current working directory to path
 addpath(pwd);
 addpath(fullfile(pwd, 'subsystems'));
+addpath(fullfile(pwd, 'utils'));
 
 % Load or save parameters
 parameters
