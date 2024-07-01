@@ -24,11 +24,13 @@ cat_term_num = flowrate_regen_catalyst * cp_regen_catalyst * temperature_regen_c
 steam_term_num = flowrate_steam * cp_steam * temperature_steam;
 
 % Denominator terms
-vgo_term_den = flowrate_vgo * cp_vgo_vapour
-cat_term_den = flowrate_regen_catalyst * cp_regen_catalyst
-steam_term_den = flowrate_steam * cp_steam
+vgo_term_den = flowrate_vgo * cp_vgo_vapour;
+cat_term_den = flowrate_regen_catalyst * cp_regen_catalyst;
+steam_term_den = flowrate_steam * cp_steam;
 
 % Calculate the temperature of the feed into the riser reactor with the following equation
 temperature_in = (vgo_term_num + cat_term_num + steam_term_num) / (vgo_term_den + cat_term_den + steam_term_den);
+
+fprintf('Feed temperature into riser reactor = %.2f C\n', temperature_in)
 
 
